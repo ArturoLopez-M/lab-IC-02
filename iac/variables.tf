@@ -1,4 +1,4 @@
 variable "web_server_port"{
-    description = "Puertos del servidor web según el entorno"
+    description = "Puertos del frontend según el entorno"
     type = map(number)
 }
