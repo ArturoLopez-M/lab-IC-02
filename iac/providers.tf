@@ -17,6 +17,6 @@ resource "docker_image" "nginx" {
   name = "nginx:latest"
 }
 
-output "image_id"{
-    value= docker_image.nginx.image_id
+output "image_id" {
+  value = docker_image.nginx.image_id
 }
