@@ -11,11 +11,6 @@ provider "docker" {
   # Configuration options
 }
 
-# Start a container
-resource "docker_container" "nginx" {
-  name  = "nginx-iac-lab02"
-  image = docker_image.nginx.image_id
-}
 
 # Find the latest Nginx precise image.
 resource "docker_image" "nginx" {
@@ -23,5 +18,5 @@ resource "docker_image" "nginx" {
 }
 
 output "image_id"{
-    value= docker_image.nginx.image_id[terraform.workspace]
+    value= docker_image.nginx.image_id
 }
